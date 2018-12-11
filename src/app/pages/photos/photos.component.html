@@ -1,0 +1,126 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" class="flex-p">
+    <div fxLayout="row">
+        <mat-button-toggle-group #controls="matButtonToggleGroup">            
+            <!--<mat-button-toggle value="add" (click)="openPhotosDialog(null)">
+                <mat-icon>person_add</mat-icon>
+            </mat-button-toggle>-->
+            <mat-button-toggle value="search">
+                <mat-icon>search</mat-icon>
+            </mat-button-toggle>           
+        </mat-button-toggle-group>            
+    </div>
+    <form class="user-search" [class.show]="controls.value == 'search'">
+        <mat-form-field class="user-search-input">
+            <input matInput placeholder="Rechercher ..." [(ngModel)]="searchText" name="search">
+        </mat-form-field>
+    </form>
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <mat-button-toggle-group #viewType="matButtonToggleGroup">            
+            <mat-button-toggle value="grid" checked="true">
+                <mat-icon>view_module</mat-icon>
+            </mat-button-toggle>
+            <mat-button-toggle value="list">
+                <mat-icon>view_list</mat-icon>
+            </mat-button-toggle>           
+        </mat-button-toggle-group>
+    </div>
+</div>
+
+
+<div *ngIf="viewType.value == 'grid'" fxLayout="row wrap">    
+    <div *ngFor="let photo of photos | PhotosSearchPipe : searchText| paginate: { itemsPerPage: 8, currentPage: page }" fxFlex="100" fxFlex.gt-md="25" fxFlex.md="50" class="flex-p"> 
+        <mat-card class="p-0">  
+            <div class="bg-primary" fxLayout="row" fxLayoutAlign="space-between center">
+                <h3 class="user-name">{{photo.date}}</h3> 
+                <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </div>
+            <mat-menu #menu="matMenu" xPosition="before">
+                <span (mouseleave)="menuTrigger.closeMenu()">
+                    <button mat-menu-item (click)="openPhotosDialog(photo)">
+                        <mat-icon>mode_edit</mat-icon>
+                        <span>Edit</span>
+                    </button>
+                </span>
+            </mat-menu>
+            <div class="photo-content" fxLayout="row" fxLayoutAlign="space-around center">
+                <div fxFlex="100" fxLayout="column" fxLayoutAlign="center center">
+                    <div class="photo-img">
+                        <img src="{{photo.url}}" class="transition-2" (click)="openPhotosDialog(photo)">
+                        <!-- <img *ngIf="user.profile.image" [src]="user.profile.image" class="transition-2" [class.blocked]="user.settings.isDeleted">
+                        <img *ngIf="!user.profile.image" src="assets/img/users/default-user.jpg" class="transition-2" [class.blocked]="user.settings.isDeleted">  
+                        <mat-icon *ngIf="user.settings.isDeleted" class="warn-color">block</mat-icon> -->
+                    </div>                                            
+                    <p fxLayout="row" >
+                            <!-- <mat-icon class="muted-text">photo_size_select_actual</mat-icon> -->
+                            <span>{{photo.comment}}</span>
+                    </p>
+    
+                </div>
+            </div>
+        </mat-card>
+    </div>
+</div>
+<!-- | UserSearchPipe : searchText  -->
+<div *ngIf="viewType.value == 'list'" fxLayout="row wrap">
+    <div *ngFor="let photo of photos | paginate: { itemsPerPage: 6, currentPage: page }" fxFlex="100" class="flex-p"> 
+            <mat-card class="p-0">  
+                    <div class="bg-primary" fxLayout="row" fxLayoutAlign="space-between center">
+                        <h3 class="user-name">{{photo.date}}</h3> 
+                        <button mat-icon-button [matMenuTriggerFor]="menu" #menuTrigger="matMenuTrigger">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                    </div>
+                    <mat-menu #menu="matMenu" xPosition="before">
+                        <span (mouseleave)="menuTrigger.closeMenu()">
+                            <button mat-menu-item (click)="openPhotosDialog(photo)">
+                                <mat-icon>mode_edit</mat-icon>
+                                <span>Edit</span>
+                            </button>
+                            <!-- <button mat-menu-item (click)="deleteUser(user);">
+                                <mat-icon>delete</mat-icon>
+                                <span>Delete</span>
+                            </button> -->
+                        </span>
+                    </mat-menu>
+                    <div class="photo-content" fxLayout="row" fxLayoutAlign="space-around center">
+                        <div fxFlex="70" fxLayout="column" fxLayoutAlign="center center">
+                            <div class="photo-img">
+                                <img src="{{photo.url}}" class="transition-2" (click)="openPhotosDialog(photo)">
+                                <!-- <img *ngIf="user.profile.image" [src]="user.profile.image" class="transition-2" [class.blocked]="user.settings.isDeleted">
+                                <img *ngIf="!user.profile.image" src="assets/img/users/default-user.jpg" class="transition-2" [class.blocked]="user.settings.isDeleted">  
+                                <mat-icon *ngIf="user.settings.isDeleted" class="warn-color">block</mat-icon> -->
+                            </div>                                            
+                            <!--<div class="user-social">
+                                 <mat-slide-toggle color="primary" [checked]="user.settings.isDeleted" (change)="user.settings.isDeleted = !user.settings.isDeleted"></mat-slide-toggle> 
+                            </div>-->
+                            <p fxLayout="row" >
+                                    <!-- <mat-icon class="muted-text">photo_size_select_actual</mat-icon> -->
+                                    <span>{{photo.comment}}</span>
+                            </p>
+                        </div>
+                        <!--<div fxFlex="30" fxLayout="column" class="user-details transition-2" >
+                            <p fxLayout="row" fxLayoutAlign="start center">
+                                <mat-icon class="muted-text">card_membership</mat-icon>
+                                <span>{{photo.comment}}</span>
+                            </p>
+                            
+                        </div>-->
+                    </div>
+                </mat-card>
+    </div>
+</div>
+
+<div *ngIf="photos" fxLayout="row wrap">
+    <div fxFlex="100" class="flex-p"> 
+        <mat-card class="p-0 text-center">           
+            <pagination-controls class="pado-pagination" autoHide="true" maxSize="3" (pageChange)="onPageChanged($event)"></pagination-controls>
+        </mat-card>
+    </div>
+</div>
+
+<div *ngIf="!photos" fxLayout="column" fxLayoutAlign="center center" class="user-spinner">   
+    <mat-spinner color="primary"></mat-spinner>    
+</div>
+

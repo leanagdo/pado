@@ -1,0 +1,474 @@
+<!-- <div class="cv-content">
+        <div class="upgrade-imzg">
+          <img src="https://source.unsplash.com/random/64x64">
+          <div class="tooltip">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ea sequi recusandae commodi necessitatibus voluptatum, labore libero quasi quos veniam eveniet laborum aspernatur harum iusto, provident itaque hic laboriosam unde!
+          </div>
+        </div>
+        <div class="upgrade-body">
+          <p>
+            <img src="https://source.unsplash.com/random/24x24">
+            100 (dmg)
+          </p>
+          <p>
+            <img src="https://source.unsplash.com/random/24x24">
+            500 (cost)
+          </p>
+        </div>
+      </div><div class="cv-content">
+        <div class="image">
+          <img src="https://source.unsplash.com/random/64x64">
+          <div class="tooltip">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ea sequi recusandae commodi necessitatibus voluptatum, labore libero quasi quos veniam eveniet laborum aspernatur harum iusto, provident itaque hic laboriosam unde!
+          </div>
+        </div>
+        <div class="body">
+          <p>
+            <img src="https://source.unsplash.com/random/24x24">
+            100 (dmg)
+          </p>
+          <p>
+            <img src="https://source.unsplash.com/random/24x24">
+            500 (cost)
+          </p>
+        </div>
+      </div><div class="cv-content">
+        <div class="image">
+          <img src="https://source.unsplash.com/random/64x64">
+          <div class="tooltip">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ea sequi recusandae commodi necessitatibus voluptatum, labore libero quasi quos veniam eveniet laborum aspernatur harum iusto, provident itaque hic laboriosam unde!
+          </div>
+        </div>
+        <div class="body">
+          <p>
+            <img src="https://source.unsplash.com/random/24x24">
+            100 (dmg)
+          </p>
+          <p>
+            <img src="https://source.unsplash.com/random/24x24">
+            500 (cost)
+          </p>
+        </div>
+</div> -->
+
+      
+ <div class="cv-content-dog">
+        <!-- <mat-card>
+          <mat-card-title>Basic grid list</mat-card-title>
+          <mat-card-content class="demo-basic-list">
+            <mat-grid-list cols="4" [rowHeight]="basicRowHeight">
+              <mat-grid-tile> One </mat-grid-tile>
+              <mat-grid-tile> Two </mat-grid-tile>
+              <mat-grid-tile> Three </mat-grid-tile>
+              <mat-grid-tile> Four </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      
+        <mat-card>
+          <mat-card-title>Grid with 1 cell at the beginning of a new row</mat-card-title>
+          <mat-card-content class="demo-basic-list">
+            <mat-grid-list [cols]="6" gutterSize="20px" rowHeight="20px">
+              <mat-grid-tile [colspan]="3" [rowspan]="4"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="3" [rowspan]="4"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="1" [rowspan]="2"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      
+        <mat-card>
+          <mat-card-title>Grid with col-span</mat-card-title>
+          <mat-card-content class="demo-basic-list">
+            <mat-grid-list [cols]="10" gutterSize="20px" rowHeight="20px">
+              <mat-grid-tile [colspan]="4" [rowspan]="4"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="2" [rowspan]="2"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="4" [rowspan]="4"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="4" [rowspan]="4"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+              <mat-grid-tile [colspan]="4" [rowspan]="4"
+                             class="mat-elevation-z15">
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card>
+      
+        <mat-card>
+          <mat-card-title>Fixed-height grid list</mat-card-title>
+          <mat-card-content>
+            <mat-grid-list [cols]="fixedCols" [rowHeight]="fixedRowHeight">
+              <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+                            [style.background]="tile.color">
+                {{tile.text}}
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+          
+        </mat-card>
+      
+        <mat-card>
+          <mat-card-title>Ratio-height grid list</mat-card-title>
+          <mat-card-content>
+            <mat-grid-list cols="2" [rowHeight]="ratio" gutterSize="4px">
+              <mat-grid-tile *ngFor="let tile of tiles" [style.background]="'lightblue'">
+                {{tile.text}}
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+
+        </mat-card>
+      
+        <mat-card>
+          <mat-card-title>Fit-height grid list</mat-card-title>
+          <mat-card-content>
+            <mat-grid-list cols="2" rowHeight="fit" [gutterSize]="ratioGutter"
+                          [style.height]="fitListHeight">
+              <mat-grid-tile *ngFor="let tile of tiles" [style.background]="'#F1EBBA'">
+                {{tile.text}}
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+
+        </mat-card>
+      
+        <mat-card>
+          <mat-card-title>Grid list with header</mat-card-title>
+          <mat-card-content>
+            <mat-grid-list cols="3" rowHeight="200px">
+              <mat-grid-tile *ngFor="let dog of dogs" style="background:gray">
+                <mat-grid-tile-header>
+                  <mat-icon mat-grid-avatar>info_outline</mat-icon>
+                  {{dog.name}}
+                </mat-grid-tile-header>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card> -->
+      
+        <!-- <mat-card *ngIf="false === true">
+          <mat-card-title>Grid list with footer</mat-card-title>
+          <mat-card-content>
+            <mat-grid-list cols="3" rowHeight="200px">
+              <mat-grid-tile *ngFor="let dog of dogs">
+                <img [alt]="dog.name" src="https://material.angularjs.org/material2_assets/ngconf/{{dog.name}}.png">
+                <mat-grid-tile-footer>
+                  <h3 mat-line>{{dog.name}}</h3>
+                  <span mat-line>Human: {{dog.human}}</span>
+                  <mat-icon>star_border</mat-icon>
+                </mat-grid-tile-footer>
+              </mat-grid-tile>
+            </mat-grid-list>
+          </mat-card-content>
+        </mat-card> -->
+      </div>
+       
+
+
+
+
+
+
+<div fxLayout="column" fxLayout.gt-sm="row wrap">
+    <div fxFlex="100" class="flex-p"> 
+        <mat-card class="custom-card">
+            <mat-card-header class="bg-primary p-1" fxLayoutAlign="flex-start center">
+                <mat-icon>card_travel</mat-icon>
+                <mat-card-title class="m-0">
+                    <h3>Expérience professionnelle
+                    </h3>
+                </mat-card-title>
+                <div fxFlex>
+                    <button style="color:white" *ngIf="!showExperiences" mat-button color="primary" (click)="openExperiencesAll()">Tout ouvrir</button>
+                    <button style="color:white" *ngIf="showExperiences" mat-button color="primary" (click)="closeExperiencesAll()">Tout fermer</button>
+                </div>
+
+                <div fxFlex></div>
+            </mat-card-header>
+            <br>
+                    <!--<mat-card-header fxLayoutAlign="center center">                
+                        <mat-card-subtitle><h2>Expansion panel as accordion</h2></mat-card-subtitle>
+                    </mat-card-header>-->
+                    <mat-card-content >
+
+
+                                 
+                        <!--<mat-accordion class="example-headers-align">-->
+                            <mat-expansion-panel hideToggle="false" *ngFor="let experience of rows.experiences" [expanded]="showExperiences">
+                                <mat-expansion-panel-header fxLayoutAlign="space-around" class="paddingRight" [style.background]="red"
+                                    [ngStyle.xs]="{'font-size.px': 10}" [ngStyle.sm]="{'font-size.px': 12}" [ngStyle.md]="{'font-size.px': 14}" >
+                                    <mat-panel-title>{{experience.date}}</mat-panel-title>
+                                    <mat-panel-description>{{experience.enterprise}}</mat-panel-description>
+                                    <p><span class="paddingRight" >{{experience.job}}</span></p>
+                                </mat-expansion-panel-header>
+
+                                
+    
+                                <div class="cv-component-dpak" [ngStyle.xs]="{'font-size.px': 10}" [ngStyle.sm]="{'font-size.px': 12}" [ngStyle.md]="{'font-size.px': 14}"
+                                fxLayout="row" fxLayout.xs="row" fxLayout.md="50" fxLayout.gt-md="row" fxLayoutGap="0.5%">
+                                    <div fxFlex="100%" fxLayout.xs="column">
+                                        <div style="width: 200px;">
+                                            <div ><a href="{{experience.logourl}}" target="_blank"><img src="{{experience.image}}" width="120" max-height="40"></a></div>
+                                        </div>
+
+                                        <div fxFlex="70" id="container-dpak">
+                                            <div  class="flex-p exp-content" [innerHTML]="experience.content.join('')"></div>
+                                            <!-- <div >
+                                                    <ul>
+                                                       <li> List Item
+                                                         <ul>
+                                                            <li> Child </li>
+                                                         </ul>
+                                                       </li>
+                                                       <li> List Item </li>
+                                                       <li> List Item </li>
+                                                       <li> List Item </li>
+                                                    </ul>
+                                                 </div> -->
+                                        </div>
+                                    </div>
+
+
+
+                                    <!-- <div class="container" fxLayout="row" fxLayout.xs="row" fxLayout.md="50" fxLayout.gt-md="row" fxLayoutWrap fxLayoutGap="0.5%">
+                                            <div class="welcome" fxFlex="70%" fxLayout.xs="column">
+                                                <div fxFlex="20" class="flex-p">
+                                                        <div class="camera" style="width:100%"><a href="https://www.hug-ge.ch/" target="_blank"><img src="assets/img/app/logo-hug.png" width="60%"></a></div>
+                                                </div>
+                                        
+                                                <div fxFlex="100%" class="actuel" >
+                                                        <p>Employé depuis 2017 par les <a href="https://www.hug-ge.ch/" target="_blank">Hopitaux Universitaires de Genève </a>, 
+                                                            je travail à la Direction des Systèmes d'Information et plus particulièrement pour le domaine patient.</p>
+                                                </div>
+                                            </div>
+                                    </div> -->
+                    
+                                    <!--<div class="cv-content flex-p" fxFlex="10" *ngFor="let skill of experience.skills">
+                                                                <img ngShow="getSkillsImage(skill) !== undefined" [alt]="dqsdqsdqsdqs" src="{{getSkillsImage(skill)}}" width="32px" height="32px" [matTooltip]="toto">
+                                        
+                                                       <mat-grid-list cols="12" rowHeight="64px">
+                                                        <mat-grid-tile *ngFor="let skill of experience.skills">
+                                                        </mat-grid-tile>
+                                                      </mat-grid-list> -->
+                                                    <!-- </mat-card-content>
+                                            </mat-card> 
+               
+                                    </div>-->
+
+                                </div>
+                          
+                                    <!--<mat-action-row>
+                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                </mat-action-row>-->
+                            </mat-expansion-panel>
+
+                            <!--<mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle="false">
+                                <mat-expansion-panel-header fxLayoutAlign="space-around" >
+                                    <mat-panel-title>2017 - aujourd'hui</mat-panel-title>
+                                    <mat-panel-description>HUG (Genève)</mat-panel-description>
+                                    <p><span style="color:blue" font-size="2em">Analyste en informatique</span></p>
+                                </mat-expansion-panel-header>
+                                <p>sqSq</p>
+
+                                <mat-action-row>
+                                    <button mat-button color="primary" (click)="nextStep()">Next</button>
+                                </mat-action-row>
+                            </mat-expansion-panel>-->
+
+                        <!--</mat-accordion>-->
+                    </mat-card-content>
+
+
+
+            <!--<mat-divider></mat-divider>
+            <mat-card-actions fxLayoutAlign="end center">
+                <button mat-icon-button><mat-icon>favorite</mat-icon></button>
+                <button mat-icon-button><mat-icon>share</mat-icon></button>
+            </mat-card-actions> -->
+        </mat-card>
+    </div>
+
+    <br>
+    <div fxFlex="100%" class="flex-p"  >
+        <mat-card class="custom-card" >
+            <mat-card-header class="bg-primary p-1" fxLayoutAlign="flex-start center">
+                <mat-icon>poll</mat-icon>
+                <mat-card-title class="m-0">
+                    <h3>Compétence
+                    </h3>
+                  </mat-card-title>
+                <div fxFlex>
+                    <button style="color:white" *ngIf="!showAll" mat-button color="primary" (click)="openAll()">Tout ouvrir</button>
+                    <button style="color:white" *ngIf="showAll" mat-button color="primary" (click)="closeAll()">Tout fermer</button>
+                </div>
+            </mat-card-header>
+            <br>
+            
+            <mat-card-content>
+                <div class="flex-p" fxLayout="row" fxLayout.lt-md="column">
+                            <div fxFlex="25"  >
+                                <mat-expansion-panel hideToggle="false"  [expanded]="showBackend">
+                                    <mat-expansion-panel-header fxLayoutAlign="space-around" >
+                                        <mat-panel-title>Backend</mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div *ngFor="let skill of rows.skills['backend']">
+                                        <p>{{skill.name}} <span class="label label2" data-toggle="tooltip" data-placement="top" title="{{getTooltip(skill.years)}}">{{getYears(skill.years)}} ans</span> </p>
+                                    </div>
+                                </mat-expansion-panel>
+                
+                            </div>
+                            <div fxFlex="25" >
+                                <mat-expansion-panel hideToggle="false" [expanded]="showFrontend">
+                                    <mat-expansion-panel-header fxLayoutAlign="space-around" >
+                                        <mat-panel-title>Frontend</mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div *ngFor="let skill of rows.skills['frontend']">
+                                        <p>{{skill.name}} <span class="label label2" data-toggle="tooltip" data-placement="top" title="{{getTooltip(skill.years)}}">{{getYears(skill.years)}} ans</span> </p>
+                                    </div>
+                                </mat-expansion-panel>
+                            </div>
+                            <div fxFlex="25" >
+                                <mat-expansion-panel hideToggle="false" [expanded]="showTools">
+                                    <mat-expansion-panel-header fxLayoutAlign="space-around" >
+                                        <mat-panel-title>Outils</mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div *ngFor="let skill of rows.skills['tools']">
+                                        <p>{{skill.name}} <span class="label label2" data-toggle="tooltip" data-placement="top" title="{{getTooltip(skill.years)}}">{{getYears(skill.years)}} ans</span> </p>
+                                    </div>
+                                </mat-expansion-panel>
+                            </div>
+                            <div fxFlex="25" >
+                                <mat-expansion-panel hideToggle="false" [expanded]="showIntegration">
+                                    <mat-expansion-panel-header fxLayoutAlign="space-around" >
+                                        <mat-panel-title>Intégration</mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <div *ngFor="let skill of rows.skills['integration']">
+                                        <p>{{skill.name}} <span class="label label2" data-toggle="tooltip" data-placement="top" title="{{getTooltip(skill.years)}}">{{getYears(skill.years)}} ans</span> </p>
+                                    </div>
+                                </mat-expansion-panel>
+                            </div>
+                </div>
+
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+
+    <br>
+    <div fxFlex="100" class="flex-p"> 
+
+        <mat-card class="custom-card">
+            <mat-card-header class="bg-primary p-1" fxLayoutAlign="flex-start center">
+                <mat-icon>school</mat-icon>
+                <mat-card-title class="m-0">
+                    <h3>Formation
+                    </h3>
+                </mat-card-title>
+                <div fxFlex></div>
+            </mat-card-header>
+            <br>
+            <mat-card-content class="p-">
+              <div *ngFor="let training of rows.trainings">
+
+                <div fxFlex="10" class="flex-p">
+                    <div [innerHTML]="training.year"></div>
+                  </div>
+                <div fxFlex="90" class="flex-p">
+                    <div [innerHTML]="training.name"></div>
+                </div>
+              </div>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+
+
+    <br>
+    <!--
+    <mat-expansion-panel fxFlex="50" class="flex-p">
+        <mat-expansion-panel-header class="bg-violet p-1" >
+            <mat-panel-title>Langues data</mat-panel-title>
+            <mat-panel-description>Langues your name and age</mat-panel-description>
+        </mat-expansion-panel-header>                    
+
+      <mat-card class="custom-card">
+          <mat-card-header fxLayoutAlign="flex-start center">
+              <mat-icon>language</mat-icon>
+              <mat-card-title class="m-0">
+                  <h3>Langues
+                  </h3>
+              </mat-card-title>
+              <div fxFlex></div>
+          </mat-card-header>
+          <br>
+          <mat-card-content class="p-">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nihil quis mollitia odio magni eaque id porro unde inventore recusandae. Debitis necessitatibus voluptates magnam eveniet odit distinctio odio provident sit.
+              </p>
+          </mat-card-content>
+      </mat-card>
+
+  </mat-expansion-panel>-->
+
+  <div fxFlex="50" class="flex-p"> 
+      <mat-card class="custom-card">
+          <mat-card-header class="bg-primary p-1" fxLayoutAlign="flex-start center">
+              <mat-icon>local_activity</mat-icon>
+              <mat-card-title class="m-0">
+                  <h3>Langues
+                  </h3>
+              </mat-card-title>
+              <div fxFlex></div>
+          </mat-card-header>
+          <br>
+          <mat-card-content class="p-">
+              <div *ngFor="let language of rows.languages">
+
+                  <div fxFlex="15" class="flex-p">
+                      <div [innerHTML]="language.name"></div>
+                    </div>
+                  <div fxFlex="85" class="flex-p">
+                      <div [innerHTML]="language.content"></div>
+                  </div>
+                </div>
+
+          </mat-card-content>
+      </mat-card>
+  </div>
+
+    <div fxFlex="50" class="flex-p"> 
+        <mat-card class="custom-card">
+            <mat-card-header class="bg-primary p-1" fxLayoutAlign="flex-start center">
+                <mat-icon>local_activity</mat-icon>
+                <mat-card-title class="m-0">
+                    <h3>Centres d'intérets
+                    </h3>
+                </mat-card-title>
+                <div fxFlex></div>
+            </mat-card-header>
+            <br>
+            <mat-card-content class="p-">
+                <div *ngFor="let hobby of rows.hobbies">
+
+                    <div fxFlex="100" class="flex-p">
+                        <div [innerHTML]="hobby.name"></div>
+                      </div>
+                  </div>
+  
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

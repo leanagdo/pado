@@ -1,0 +1,323 @@
+{
+	"experiences": [
+		{
+			"enterprise" : "Hopitaux Universitaire de Genève",
+			"job" : "Analyste en Informatique",
+			"date" : "2017 - aujourd'hui",
+			"image" : "assets/img/cv/logo-hug.png",
+			"logourl" : "https://www.hug-ge.ch/",
+			"content" : ["<p><b>Responsable de l'application des formulaires générique (domaine patient) </b></p>",
+				"<ul><li>Développement java/flex/angular</li>",
+				"<li>Migration technologie jboss vers tomcat 8</li>",
+				"<li>Chef de projet dans le cadre de la réécriture de l'application en Angular</li>", 
+				"<li>Intégration continue</li></li>",
+				"<li>Maintenance évolutive</li>",
+				"<li>Documentations Wiki, JIRA</li>",
+				"<li>Réalisation et suivi des mises en production</li></ul>",
+				"<br>",
+				"<p><i class='material-icons md-18 green'>&#xE332;</i>Java 8, Flex 4, Angular 7</p>"],
+			"content-org" : ["<p><b>Domaine patient - responsable de l'application des formulaires générique </b>",
+					"<br>Développement java/flex/angular",
+					"<br>Migration technologie jboss vers tomcat 8",
+					"<br>Chef de projet dans le cadre de la réécriture de l'application en Angular", 
+					"<br> <ul><li> réalisation de la réécriture par un consultant externe</li></ul>",
+					"<br> - suivi de projet",
+					"<br> - méthodologie Kanban",
+					"<br>Intégration continue",
+					"<br>Maintenance évolutive",
+					"<br>Documentations Wiki, JIRA",
+					"<br>Réalisation et suivi des mises en production",
+					"</p><br>",
+					"<p><i class='material-icons md-18 green'>&#xE332;</i>Java 8, Flex 4, Angular 7</p>"],
+				"skills" : ["java","angular","flex","gradle","maven","jenkins"]
+
+		},
+		{
+			"enterprise": "Qim Info Genève",
+			"job": "Analyste en Informatique",
+			"date": "2015 - 2017",
+			"image": "assets/img/cv/logo-qiminfo.png",
+			"logourl" : "https://www.qiminfo.ch/",
+			"content": ["<p><b>Mission au Hopitaux Universitaire de Genève (HUG) </b></p>",
+				"<p>Développement de formulaire générique pour le domaine patient",
+				"<br>Maintenance évolutive et corrective",
+				"<br>Adaptation à la méthodologie du client", 
+				"<br>Respects des procédures internes",
+				"<br>Relations avec utilisateurs et experts métiers",
+				"<br>Prise en charges des mises en productions",
+				"<br>Présentation des démos avec les utilisateurs",
+				"<br>Documentations Wiki, JIRA",
+				"<br>Réalisation des mises en production",
+				"</p><br>",
+				"<p><i class='material-icons md-18 green'>&#xE332;</i>Flex 4, Java 6</p>"],
+			"skills": ["flex","java","angular"]
+		},
+		{
+			"enterprise" : "IWI Luxembourg",
+			"job" : "Senior Software Engineer",
+			"date" : "2012 - 2015",
+			"image" : "assets/img/cv/logo-iwi.png",
+			"logourl" : "https://www.wealins.com/",
+			"content" : ["<p>Architecture projets Angular JS", 
+				   "<br>Architecture SOA, approche contract first",
+				   "<br>Equipe Agile - méthode SCRUM", 
+				   "<br>Maintenance de l’application existante dans une architecture SOA",
+				   "<br>Développement des nouvelles fonctionnalités Java, Flex, Angular JS",
+				   "<br>Référant sur les développements front",
+				   "<br>Documentations wiki",
+				   "</p><br>",
+				   "<p><i class='material-icons md-18 green'>&#xE332;</i>STS, Eclipse, Flex Builder 4, Maven, Jenkins, Sonar, Flex, Java 6, Oracle 11, Anjular JS / Flex 3 / Java 6 / Scrum, Pure MVC, Spring 3</p>"],
+			"skills" : "<p><i class='material-icons md-18 green'>&#xE332;</i>STS, Eclipse, Flex Builder 4, Maven, Jenkins, Sonar, Flex, Java 6, Oracle 11, Anjular JS / Flex 3 / Java 6 / Scrum, Pure MVC, Spring 3</p>"
+		},
+		{
+			"enterprise" : "C-Services Luxembourg",
+			"job" : "Analyste programmeur",
+			"date" : "2010 - 2012",
+			"image" : "assets/img/cv/logo-cservices.jpg",
+			"logourl" : "http://www.cronos.lu/",
+			"content" : ["<p><b>Mission Dexia Life &amp; Pension </b>",
+				   "<br>Mise en place de l'une architecture micro-application pour les 'fronts' FLEX", 
+				   "<br>Développement, maintenance des applications et composants", 
+				   "<br>Développement JAVA 6, Flex 3 et 4",
+					"<br>Migration de l’ancienne application Flex vers une architecture micro-application",
+					"<br>Création et maintenance de composants Flex",
+					"<br>Conseils et recommandations Flex",
+					"</p><br>",
+				    "<p><i class='material-icons md-18 green'>&#xE332;</i>STS, Eclipse, Flex Builder 4, Maven, Jenkins, Sonar, Flex 3/4, Java 6, Oracle 11, Pure MVC, Spring 2.5</p>"],
+			"skills" : "<p><i class='material-icons md-18 green'>&#xE332;</i>STS, Eclipse, Flex Builder 4, Maven, Jenkins, Sonar, Flex 3/4, Java 6, Oracle 11, Pure MVC, Spring 2.5</p>"
+		},
+		{
+			"enterprise" : "Logica Luxembourg",
+			"job" : "Expert technique",
+			"date" : "2001 - 2010",
+			"image" : "assets/img/cv/logo-logica.png",
+			"logourl" : "https://www.cgi.com/luxembourg/fr-fr/",
+			"content" : ["2009 - 2010",
+					"<p><b>Mission Dexia Life &amp; Pension </b>",
+				   "<br>Projet Dexia Life Insurance (DaLI)",
+				   "<br>Développement Java / Flex",
+				   "<br>Maintenance Projet DEBO",
+					"<br>Analyse des besoins clients",
+					"<br>Utilisation de modules Flex",
+					"<br>Tests unitaires",
+					"<br>Documentations techniques",
+					"<br>Développement Java 5 / Flex 3",
+					"</p><br>",
+					"<p><i class='material-icons md-18 green'>&#xE332;</i>Eclipse, Flex Builder 3, Oracle, Flex 3 / Java 5, SQL, Pure MVC, Spring 2</p>",
+					"<br>",
+					"2008 - 2009",
+					"<p><b>Mission Dexia Life &amp; Pension </b>",
+				   "<br>Développement Java / Flex",
+				   "<br>Projet DEBO",
+				   "<br>Mise en place de l’architecture graphique en FLEX (partie cliente)",
+					"<br>Maintenance corrective et évolutive",
+					"<br>Déploiement de l’application dans différents environnements",
+					"<br>Préparation de mise en production",
+					"<br>Réalisation de documentations",
+					"<br>Développement Flex 3 (partie cliente) et Java 4 (partie serveur)",
+					"</p><br>",
+					"<p><i class='material-icons md-18 green'>&#xE332;</i>Eclipse, Flex Builder 3, Oracle, programmation Flex 3, Java 5, SQL, Pure MVC, Spring</p>",
+					"<br>",
+					"2001 - 2008",
+					"<p><b>Mission Centre informatique de l'état</b>",
+				    "<br>Projet Aide au logement",
+					"<br>Analyse et développement des projets des aides aux logements « MLALO » et « MLEPL »",
+					"<br>Etude des besoins clients (réunion régulière avec le client)",
+					"<br>Prise en charge complète de l'analyse, de la modélisation, de la réalisation, de différentes parties de la gestion de l’application d’aide au logement (Remboursement, dispense, retour de paiement, compensation)",
+					"<br>Réalisation de l'ensemble des documents d'analyse respectant la méthodologie du client ",
+					"<br>Réalisation des tests d’implémentation (Case COOL : GEN, client (Windows 2000) / serveur (Windows 2000), base de donnée Oracle)",
+					"<br>Réalisation des tests d’intégration  (Case COOL : GEN, client (Windows 2000) / serveur (Cobol), base de donnée (DB2), IBM Mainframe (CICS/TSO)",
+					"<br>Gestion de programmes batchs (JCL)",
+					"<br>Planification et réalisation de la mise en production (suivi via formulaire Microsoft Word et tableau Excel)",
+					"<br>Maintenance évolutive et corrective (suivi)",
+					"<br>Organisation d’évènements afin de promouvoir l’offre LOGICA.",
+					"</p><br>",
+					"<p><i class='material-icons md-18 green'>&#xE332;</i>Cool Gen 6, MQserie, mainframe, DB2, Windows 2000, Oracle</p>"]
+		},
+		{
+			"enterprise" : "Sinequa Paris",
+			"job" : "Développeur",
+			"date" : "2000 - 2001",
+			"image" : "assets/img/cv/logo-sinequa.png",
+			"logourl" : "https://www.sinequa.com/",
+			"content" : ["<p>Développement de fonctionnalités spécifiques pour le produit « Intuition »",
+					"<br>Étude des besoins clients. Comparaison des besoins par rapport aux possibilités fournies en standard par le moteur de recherche",
+					"<br>Étude et développement des fonctionnalités spécifiques et complémentaires au moteur de recherche (en langage C++)",
+					"<br>Étude et développement de la reprise des données",
+					"<br>Étude et développement de l’intégration des nouvelles applications dans le système d’informations des clients",
+					"<br>Intégration web",
+					"</p><br>",
+					"<p><i class='material-icons md-18 green'>&#xE332;</i>Visual C++, programmation PHP, ASP, C++</p>"],
+			"skills" : "<p><i class='material-icons md-18 green'>&#xE332;</i>Visual C++, programmation PHP, ASP, C++ </p>"
+		}
+	
+	
+
+	  ],
+
+	  "skills" : {
+		"backend" : [
+		{
+			"name" : "SOA (contract first)", "years" : "2012-2015"
+		},
+		{
+			"name" : "Java, Spring", "years" : "2012-NOW"
+		},
+		{
+			"name" : "PL SQL", "years" : "2012-2015"
+		},
+		{
+			"name" : "JPA", "years" : "2012-2015"
+		},
+		{
+			"name" : "XSD, JAXB, JIBX", "years" : "2012-2015"
+		},
+		{
+			"name" : "XML, Json", "years" : "2015-NOW"
+		},
+		{
+			"name" : "Flex PMD, ASDoc, Sonar", "years" : "2012-NOW"
+		},
+		{
+			"name" : "Oracle, DB2", "years" : "2012-NOW"
+		},
+		{
+			"name" : "Mokito", "years" : "2013-2014"
+		},
+		{
+			"name" : "Rest Easy", "years" : "2013-2014"
+		}
+		],
+		"frontend" : [
+		{
+			"name" : "Flex 3/4 ", "years" : "2010-NOW"
+		},
+		{
+			"name" : "Angular JS", "years" : "2013-2014"
+		},
+		{
+			"name" : "Angular 6, material", "years" : "2017-NOW"
+		},
+		{
+			"name" : "Require JS", "years" : "2013-2014"
+		},
+		{
+			"name" : "JavaScript & jQuery", "years" : "2013-2014"
+		},
+		{
+			"name" : "HTML5/CSS3", "years" : "2013-2014;2017-NOW"
+		},
+		{
+			"name" : "ASP, PHP", "years" : "2000"
+		}
+		],
+		"tools" : [
+		{
+			"name" : "Eclipse", "years" : "2010-NOW"
+		},
+		{
+			"name" : "STS", "years" : "2010-NOW"
+		},
+		{
+			"name" : "Tomcat", "years" : "2010-NOW"
+		},
+		{
+			"name" : "Toad", "years" : "2010-NOW"
+		},
+		{
+			"name" : "Wiki, Jira", "years" : "2010-NOW"
+		},
+		{
+			"name" : "MS Office", "years" : "0"
+		},
+		{
+			"name" : "Adobe Photoshop", "years" : "0"
+		},
+		{
+			"name" : "Repository : CSV, SVN, Git", "years" : "2010-NOW"
+		},
+		{
+			"name" : "TSO, ISPF, JCL", "years" : "2000-2009"
+		},
+		{
+			"name" : "Cool:Gen", "years" : "2000-2009"
+		}
+		],
+		"integration" : [
+		{
+			"name" : "Jenkins (Hudson)", "years" : "2010-NOW"
+		},
+		{
+			"name" : "Maven, Flexmojos", "years" : "2010-2015"
+		},
+		{
+			"name" : "Graddle, Yarn, Npm", "years" : "2016-NOW"
+		},
+		{
+			"name" : "Yeoman (Yo, Grunt, Bower)", "years" : "2012-2015"
+		}
+		]
+	},
+
+	"trainings" : [
+		{ 	"year" : "2015",
+			"image" : "",
+			"name" : "Scrum Master (2 jours)"
+		},
+		{ 	"year" : "2013",
+			"image" : "assets/img/cv/logo-angularjs.png",
+			"name" : "Angular JS (3 jours)"
+		},
+		{ 	"year" : "2008",
+			"image" : "assets/img/cv/logo-flex.png",
+			"name" : "Flex 4 (3 jours)"
+		},
+		{ 	"year" : "1999",
+			"image" : "assets/img/cv/logo-educ.png",
+			"name" : "<p>Maîtrise en IUP (Institut Universitaire Professionnalisé) en Génie des Systèmes Industriels, <br>option Traitement de l’Information, IUP de Metz, 57000 </p>"
+		},
+		{ 	"year" : "1998",
+			"image" : "assets/img/cv/logo-educ.png",
+			"name" : "<p>Licence en IUP (Institut Universitaire Professionnalisé) en Génie des Systèmes Industriels, <br>option Traitement de l’Information, IUP de Metz, 57000 </p>"
+		},
+		{ 	"year" : "1996",
+			"image" : "assets/img/cv/logo-educ.png",
+			"name" : "<p>BTS en Informatique Industrielle, LTR Condorcet de Schoeneck, 57350  </p>"
+		},
+		{ 	"year" : "1994",
+			"image" : "assets/img/cv/logo-educ.png",
+			"name" : "<p>BAC F2 (Electronique) (mention AB), LTR Charles July de Saint-Avold, 57500 </p>"
+		}
+	],
+
+	"languages" : [
+		{
+			"name" : "Anglais",
+			"content" : "Scolaire",
+			"image" : "assets/img/cv/drapeau-ang.gif"
+		},
+		{
+			"name" : "Allemand",
+			"content" : "Scolaire",
+			"image" : "assets/img/cv/drapeau-de.gif"
+		},
+		{
+			"name" : "Polonais",
+			"content" : "Parlé",
+			"image" : "assets/img/cv/drapeau-pf.gif"
+		}	
+		],
+
+	"hobbies" : [
+		{	"name" : "VTT"
+		},
+		{	"name" : "Nature"
+		},
+		{	"name" : "Course à pieds"
+		}
+	]
+	
+	
+
+}
+  

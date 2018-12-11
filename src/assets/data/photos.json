@@ -1,0 +1,42 @@
+{
+
+	"photos" : [
+		{
+			"date" : "20180415", "url" : "assets/photos/20180415-Venise-300.jpg", "comment" : "Venise"
+		},
+		{
+			"date" : "20180415", "url" : "assets/photos/20180415-Venise-344.jpg", "comment" : "Venise"
+		},
+		{
+			"date" : "20180421", "url" : "assets/photos/20180421-Sanctuaire La Salette Grenoble-014.jpg", "comment" : "Sanctuaire La Salette Grenoble"
+		},
+		{
+			"date" : "20180421", "url" : "assets/photos/20180421-Sanctuaire La Salette Grenoble-085.jpg", "comment" : "Sanctuaire La Salette"
+		},
+		{
+			"date" : "20180526", "url" : "assets/photos/20180526-Les médiévales d'Andilly-065.jpg", "comment" : "Les médiévales d'Andilly"
+		},
+		{
+			"date" : "20180526", "url" : "assets/photos/20180526-Les médiévales d'Andilly-079.jpg", "comment" : "Les médiévales d'Andilly"
+		},
+		{
+			"date" : "20180617", "url" : "assets/photos/20180617-Nyon bateau-Ivoire-Signal bougy-052.jpg", "comment" : "Nyon bateau-Ivoire-Signal bougy"
+		},
+		{
+			"date" : "20180714", "url" : "assets/photos/20180714-Glacier 3000 Diablerets-077.jpg", "comment" : "Glacier 3000 Diablerets"
+		},
+		{
+			"date" : "20180714", "url" : "assets/photos/20180714-Glacier 3000 Diablerets-132.jpg", "comment" : "Glacier 3000 Diablerets"
+		},
+		{
+			"date" : "20180714", "url" : "assets/photos/20180714-Glacier-3000.jpg", "comment" : "Glacier-3000"
+		},
+		{
+			"date" : "20180801", "url" : "assets/photos/20180801-Vienne balade le soir-032.jpg", "comment" : "Vienne balade le soir"
+		},
+		{
+			"date" : "20180801", "url" : "assets/photos/20180801-Vienne-Chateau-Schoenbrunn.jpg", "comment" : "Vienne-Chateau-Schoenbrunn"
+		}		
+	]
+}
+  

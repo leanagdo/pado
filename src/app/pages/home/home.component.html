@@ -1,0 +1,79 @@
+
+
+
+<div fxLayout="column">
+    <div class="flex-p">
+        <mat-card>
+                <mat-card-header>                
+                        <mat-card-subtitle><h1 style="font-size:'30px'">Bienvenue !</h1></mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayout.md="50" fxLayout.gt-md="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">     
+                        <div class="welcome" fxFlex="70%" fxShow  fxHide.xs="true" fxHide.gt-xs="false">
+                                <p>Bienvenue sur mon site personnel de <b>Dominique Paskiewicz</b>, {{getAge()}} ans, développeur dans des domaines variés tel que :</p>
+                                <ul compact type="circle" *ngFor="let domain of domains">
+                                    <li>{{domain.name}} <span class="label label2" data-toggle="tooltip" data-placement="top" title="{{getTooltip(domain.years)}}">{{getYears(domain.years)}} ans</span></li>
+                                </ul>
+                                
+                                <br>
+                                <p>Vous trouverez ici quelques informations sur mon parcours, mes loisirs, etc ...</p>
+                        </div>
+                        <div class="welcome-xs" fxFlex="70%" fxShow fxHide.gt-xs="true">
+                                <p>Site personnel de <b>Dominique Paskiewicz </b> ({{getAge()}} ans)
+                                <br>Développeur dans des domaines variés tel que :</p>
+                                <ul compact type="circle" *ngFor="let domain of domains" class="actuel">
+                                    <li>{{domain.shortname}} <span class="label label2" data-toggle="tooltip" data-placement="top" title="{{getTooltip(domain.years)}}">{{getYears(domain.years)}} ans</span></li>
+                                </ul>
+                        
+                                <br>
+                                <p>N'hésitez pas à consulter mon <a href="/cv">Curriculum Vitae.</a></p>
+                        </div>
+
+                        <div fxFlex="30%" fxShow fxHide.xs="true" fxHide.lg="false">
+                            <div class="camera" style="width:100%"><img src="assets/img/app/homepage500.png" width="100%"></div>
+                        </div>      
+                    </div>
+                </mat-card-content>
+        </mat-card>
+                       
+        <br>
+
+        <mat-card>
+            <mat-card-header>                
+                <mat-card-subtitle><h1>En ce moment</h1></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="container" fxLayout="row" fxLayout.xs="row" fxLayout.md="50" fxLayout.gt-md="row" fxLayoutWrap fxLayoutGap="0.5%">
+                        <div class="welcome" fxFlex="70%" fxLayout.xs="column">
+                            <div fxFlex="20" class="flex-p">
+                                    <div class="camera" style="width:100%"><a href="https://www.hug-ge.ch/" target="_blank"><img src="assets/img/app/logo-hug.png" width="60%"></a></div>
+                            </div>
+                    
+                            <div fxFlex="100%" class="actuel" >
+                                    <p>Employé depuis 2017 par les <a href="https://www.hug-ge.ch/" target="_blank">Hopitaux Universitaires de Genève </a>, 
+                                        je travail à la Direction des Systèmes d'Information et plus particulièrement pour le domaine patient.</p>
+                            </div>
+                        </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+        <br>
+
+        <mat-card>
+            <mat-card-footer>  
+                <div fxFlex="100" class="flex-p padding">
+                        <a href="mailto:dominique.paskiewicz@gmail.com" class="mailto maillink">Dominique Paskiewicz</a>&nbsp; &copy; all rights reserved
+                </div>
+          
+                <div class="flex-p" fxLayout="row" fxLayoutAlign="right">
+                        <a href="http://www.linkedin.com/in/dominique-paskiewicz" target="_blank"><img src="assets/img/app/linkedin-6.png" width="30" /></a>
+                </div>
+            </mat-card-footer>
+
+
+        </mat-card>
+
+
+    </div> 
+</div>

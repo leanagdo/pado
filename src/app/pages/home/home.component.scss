@@ -1,0 +1,85 @@
+.label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 60%;
+    font-weight: normal;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+
+}
+
+/* label-default 2 ans */
+.label2 {
+    background-color: #166;
+}
+
+
+/* label-green 6 ans */
+.label6 {
+    background-color: #192;
+}
+
+/* label-blue 9 ans */
+.label9 {
+    background-color: #139;
+}
+
+.actuel p {
+    max-width:100%;
+    margin-bottom:30px;
+    font-size: 18px;
+}
+.actuel ul {
+    padding-left: 30px;
+}
+.container .actuel ul li {
+    font-size: 18px;
+    padding-left: 20px;
+    font-weight: bold;
+
+    
+}
+.actuel p a {
+    color: rgb(33,150,243);
+}
+
+.welcome p {
+    //max-width:700px;
+    margin-bottom:30px;
+    font-size: 18px;
+}
+.welcome ul {
+    padding-left: 30px;
+}
+.welcome ul li {
+    font-size: 14px;
+    padding-left: 20px;
+    
+}
+.welcome p a {
+    color: rgb(33,150,243);
+}
+
+
+.welcome-xs p {
+    margin-bottom:5px;
+    font-size: 14px;
+}
+.welcome-xs ul {
+    padding-left: 30px;
+}
+.welcome-xs ul li {
+    font-size: 12px;
+    padding-left: 15px;
+}
+.welcome-xs p a {
+    color: rgb(33,150,243);
+}
+
+mat-card mat-card-header {
+    padding-left: 0px;
+}

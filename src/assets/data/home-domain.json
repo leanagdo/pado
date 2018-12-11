@@ -1,0 +1,14 @@
+{
+	"domains" : [
+		{
+			"name" : "santé (Hopitaux de Genève)", "shortname" : "santé", "years" : "2015-NOW"
+		},
+		{
+			"name" : "assurance vie (International Wealth Insurer IWI)", "shortname" : "assurance vie", "years" : "2010-2014"
+		},
+		{
+			"name" : "service d'état (aide aux logements)", "shortname" : "service d'état", "years" : "2000-2009"
+		}
+	]
+}
+  
