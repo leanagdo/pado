@@ -6,6 +6,13 @@ export class MessagesService {
     // color : danger, primary, info, warning, success
     private meetings = [
         {
+            day: '10',
+            month: 'Dec 18',
+            title: 'CV',
+            text: 'Test responsive design.',
+            color: 'info'
+        },
+        {
             day: '20',
             month: 'Oct 18',
             title: 'CV',
