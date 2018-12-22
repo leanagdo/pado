@@ -1,17 +1,13 @@
-
-
-Facturette
-<!-- 
-<ul >
-    <li *ngFor="let item of items">
-        {{item.carte}} {{item.date}} {{item.description}} {{item.montant}} {{item.ordre}}
-     
-      
-    </li> 
-</ul> -->
-
+<div fxLayout="row wrap">
+    <div fxFlex="100" fxFlex.gt-sm="40" class="flex-p"> 
+        <app-spent-by-category></app-spent-by-category>
+    </div>
+    <div fxFlex="100" fxFlex.gt-sm="60" class="flex-p">
+        <app-chart-spent></app-chart-spent>
+    </div>
+</div>
 <div fxLayout="column">
-    <div class="flex-p"> 
+    <div fxFlex="100" class="flex-p"> 
         <div fxLayout="column" class="mat-elevation-z8">           
             <mat-form-field class="p-1">
                 <input matInput placeholder="Type to filter the name column..." (keyup)="updateFilter($event)">
