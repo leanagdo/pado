@@ -16,7 +16,6 @@ export class ChartSpentComponent implements OnInit {
    * Rows that are displayed in the table.
    */
   @Input() set rows(val: any) {
-    debugger;
     this._rows = val;
 
   }
@@ -25,7 +24,6 @@ export class ChartSpentComponent implements OnInit {
    * Gets the rows.
    */
   get rows(): any {
-    debugger;
 
     return this._rows;
   }
