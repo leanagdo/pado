@@ -1,0 +1,42 @@
+<div fxLayout="row wrap" #resizedDiv>
+    <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100" class="flex-p"> 
+        <mat-card class="p-0">
+            <mat-card-header class="p-1" fxLayoutAlign="space-between center">
+                <mat-card-subtitle class="m-0">Evolution prix carburant</mat-card-subtitle>
+                <mat-chip-list>
+                    <mat-chip color="accent" selected="true" class="info-chip">
+                        <mat-icon class="icon-sm">trending_up</mat-icon>37%
+                    </mat-chip>
+                </mat-chip-list>
+            </mat-card-header>         
+            <div class="w-100 h-100p">
+                <ngx-charts-bar-vertical
+                    [scheme]="colorScheme"
+                    [results]="products"                      
+                    (select)="onSelect($event)">
+                </ngx-charts-bar-vertical>                   
+            </div>
+        </mat-card>
+    </div>
+    <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100" class="flex-p"> 
+        <mat-card class="p-0">
+            <mat-card-header class="p-1" fxLayoutAlign="space-between center">
+                <mat-card-subtitle class="m-0">Evolution kilomètre</mat-card-subtitle>
+                <mat-chip-list>
+                    <mat-chip color="primary" selected="true" class="info-chip">
+                        <mat-icon class="icon-sm">trending_up</mat-icon>15%
+                    </mat-chip>
+                </mat-chip-list>
+            </mat-card-header>         
+            <div class="w-100 h-100p">
+                <ngx-charts-line-chart
+                    [scheme]="colorScheme"
+                    [results]="orders"                      
+                    [autoScale]="autoScale"
+                    (select)="onSelect($event)">
+                </ngx-charts-line-chart>                  
+            </div>
+        </mat-card>
+    </div>
+    
+</div>
