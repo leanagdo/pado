@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
 import { AppSettings } from '../../../app.settings';
 import { Settings } from '../../../app.settings.model';
 import { orders, products, customers, refunds } from '../dashboard.data';
@@ -10,6 +10,29 @@ import { analytics } from '../dashboard.data';
   styleUrls: ['./chart-spent.component.scss']
 })
 export class ChartSpentComponent implements OnInit { 
+
+  private _rows:any;
+    /**
+   * Rows that are displayed in the table.
+   */
+  @Input() set rows(val: any) {
+    debugger;
+    this._rows = val;
+
+  }
+
+  /**
+   * Gets the rows.
+   */
+  get rows(): any {
+    debugger;
+
+    return this._rows;
+  }
+
+  
+
+
   public analytics: any[];
   public showXAxis = true;
   public showYAxis = true;
@@ -31,6 +54,8 @@ export class ChartSpentComponent implements OnInit {
 
   ngOnInit() {
     this.analytics = analytics; 
+    debugger;
+  
   }
 
   onSelect(event) {

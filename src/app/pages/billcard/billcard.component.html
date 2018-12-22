@@ -3,7 +3,9 @@
         <app-spent-by-category></app-spent-by-category>
     </div>
     <div fxFlex="100" fxFlex.gt-sm="60" class="flex-p">
-        <app-chart-spent></app-chart-spent>
+        <app-chart-spent
+          [rows]="rows">
+        </app-chart-spent>
     </div>
 </div>
 <div fxLayout="column">
