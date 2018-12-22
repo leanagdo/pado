@@ -16,6 +16,7 @@ export const routes: Routes = [
             { path: 'cv', loadChildren: 'app/pages/cv/cv.module#CvModule', data: { breadcrumb: 'Curriculum Vitae' } },
             { path: 'photos', loadChildren: 'app/pages/photos/photos.module#PhotosModule', data: { breadcrumb: 'Photos' } },
             { path: 'dashboard', loadChildren: 'app/pages/dashboard/dashboard.module#DashboardModule', data: { breadcrumb: 'Dashboard' } },
+            { path: 'billcard', loadChildren: 'app/pages/billcard/billcard.module#BillCardModule', data: { breadcrumb: 'Facturette' } },
             //{ path: 'users', loadChildren: 'app/pages/users/users.module#UsersModule', data: { breadcrumb: 'Users' } },
             //{ path: 'ui', loadChildren: 'app/pages/ui/ui.module#UiModule', data: { breadcrumb: 'UI' } },
             //{ path: 'form-controls', loadChildren: 'app/pages/form-controls/form-controls.module#FormControlsModule', data: { breadcrumb: 'Form Controls' } },
