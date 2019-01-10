@@ -52,8 +52,6 @@ export class ChartSpentComponent implements OnInit {
 
   ngOnInit() {
     this.analytics = analytics; 
-    debugger;
-  
   }
 
   onSelect(event) {
