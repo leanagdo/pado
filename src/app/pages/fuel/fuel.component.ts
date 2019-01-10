@@ -76,22 +76,8 @@ debugger;
       this.temp = items;
       this.rows = items;
 
-      // items = items.sort(
-      //   (val1 : Fuel, val2 : Fuel) => {
-      //     if (val2.dateType > val1.dateType) {
-      //       return 1;
-      //     }
-      //     else if (val2.dateType < val1.dateType) {
-      //       return -1;
-      //     }
-      //     else {
-      //       return 0;
-      //     }
-      //   });
-
-        var itemsAsc = this.sortByDateAsc(items);
-        var itemsDesc = this.sortByDateDesc(items);
-
+      var itemsAsc = this.sortByDateAsc(items);
+      var itemsDesc = this.sortByDateDesc(items);
 
       this.fuelEvolution = this.buildFuelEvolution(itemsAsc);//returnArray;
       this.kmEvolution = this.buildKmEvolution(itemsAsc);
@@ -160,8 +146,6 @@ debugger;
 
     });
 
-    //return returnArray;
-
     return returnArray.sort(
       (val1 : FuelEvolution, val2 : FuelEvolution) => {
         if (val2.date < val1.date) {
@@ -175,18 +159,6 @@ debugger;
         }
       });
   }
-
-//   const orders = [
-//     {
-//      name: 'Orders',
-//      series: [
-//        {
-//          name: "1980",
-//          value: 21632
-//        }
-//      ]
-//    }
-//  ]
 
 around2digit(numberToconvert:number):number {
   var result:number = 0;
@@ -224,10 +196,6 @@ around2digit(numberToconvert:number):number {
   
       }
     });
-
-    // for (let i = 1; i < 30; i++) { 
-    //   this.orders[0].series.push({"name": 1980+i, "value": Math.ceil(Math.random() * 1000000)});
-    // } 
 
     graph[0].series.sort(
         (val1 : Object, val2 : Object) => {
@@ -279,9 +247,6 @@ around2digit(numberToconvert:number):number {
   buildKmDatas(items:Array<Fuel>): Array<any> {
     let byYear = this.toGroupedDates(items);
 
-
-    
-   
     let graph:Array<Expanse> = new Array<Expanse>();
 
     byYear.forEach(element => {
@@ -295,7 +260,6 @@ around2digit(numberToconvert:number):number {
         series.push({"name": "km", "value": Math.floor(maxkm-minkm)});
         expanse.series = series;
 
-        //expanse.series = element.values.map(item => item.montant);
         graph.push(expanse);
     });
 
@@ -311,7 +275,7 @@ around2digit(numberToconvert:number):number {
         if (Number(x.kilometrage) > (max)) {
           max = Number(x.kilometrage)
         }
-        return max;// = total + Number(x.kilometrage.replace(",","."));
+        return max;
       });
     }
     return max;
@@ -324,7 +288,7 @@ around2digit(numberToconvert:number):number {
         if (Number(x.kilometrage) < (min)) {
           min = Number(x.kilometrage)
         }
-        return min;// = total + Number(x.kilometrage.replace(",","."));
+        return min;
       });
     }
     return min;
