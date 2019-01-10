@@ -33,10 +33,20 @@ export class HomeComponent implements OnInit {
   }
 
   getAge() {
+    debugger;
     var currentDate=new Date();
     var currentYear=currentDate.getFullYear();
+    var currentMonth=currentDate.getMonth()+1;
 
-    return currentYear - 1975;
+    var age:number = 0;
+    if (currentMonth > 10 || (currentMonth === 9 && currentDate.getDate() > 18)) {
+      age = currentYear - 1975;
+    }
+    else{
+      age = currentYear - 1 - 1975;
+    }
+
+    return age;
 
   }
 
