@@ -6,6 +6,13 @@ export class MessagesService {
     // color : danger, primary, info, warning, success
     private meetings = [
         {
+            day: '07',
+            month: 'Jan 19',
+            title: 'Carburant',
+            text: 'Ajout page carburant',
+            color: 'info'
+        },
+        {
             day: '10',
             month: 'Dec 18',
             title: 'CV',
