@@ -65,39 +65,39 @@
     <mat-sidenav #options position="end" class="options">        
        
         <div fxLayout="row" fxLayoutAlign="center center" class="control mat-elevation-z1">
-            <h2>Settings</h2>
+            <h2>Paramètres</h2>
         </div>  
 
         <div perfectScrollbar>
 
             <div fxLayout="column" class="control">
-                <h4>Layout</h4>        
+                <h4>Disposition</h4>        
                 <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>Fixed header</span>
+                    <span>En-tête fixe</span>
                     <mat-slide-toggle [checked]="settings.fixedHeader" (change)="settings.fixedHeader = !settings.fixedHeader" labelPosition="before"></mat-slide-toggle>
                 </div>                
                 <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>RTL</span>
+                    <span>Droite à gauche</span>
                     <mat-slide-toggle [checked]="settings.rtl" (change)="settings.rtl = !settings.rtl" labelPosition="before"></mat-slide-toggle>
                 </div>
             </div>
 
             <div fxLayout="column" class="control">
-                <h4>Choose menu</h4>
+                <h4>Menu</h4>
                 <mat-radio-group [(ngModel)]="menuOption" (change)="chooseMenu()">
                     <mat-radio-button *ngFor="let menu of menus" [value]="menu">{{menu}}</mat-radio-button>
                 </mat-radio-group>
             </div>
 
             <div fxLayout="column" class="control">
-                <h4>Choose menu type</h4>
+                <h4>Type de menu</h4>
                 <mat-radio-group [(ngModel)]="menuTypeOption" (change)="chooseMenuType()">
                     <mat-radio-button *ngFor="let menuType of menuTypes" [value]="menuType">{{menuType}}</mat-radio-button>
                 </mat-radio-group>
             </div>
 
             <div fxLayout="column" class="control">
-                <h4>Choose theme skin</h4>        
+                <h4>Thèmes</h4>        
                 <div fxLayout="row" fxLayoutAlign="space-around center"> 
                     <div class="skin-primary indigo-light" (click)="changeTheme('indigo-light')"><div class="skin-secondary"></div></div>  
                     <div class="skin-primary teal-light" (click)="changeTheme('teal-light')"><div class="skin-secondary"></div></div>  
@@ -109,17 +109,17 @@
             </div>
 
             <div fxLayout="column" class="control">
-                <h4>Sidenav options</h4>
+                <h4>Option de navigation</h4>
                 <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>Opened sidenav</span>
+                    <span>Menu latéral ouvert</span>
                     <mat-slide-toggle [checked]="settings.sidenavIsOpened" (change)="settings.sidenavIsOpened = !settings.sidenavIsOpened" labelPosition="before"></mat-slide-toggle>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>Pinned sidenav</span>
+                    <span>Menu latéral épinglé</span>
                     <mat-slide-toggle [checked]="settings.sidenavIsPinned" (change)="settings.sidenavIsPinned = !settings.sidenavIsPinned" labelPosition="before"></mat-slide-toggle>
                 </div>
                 <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>Sidenav user info</span>
+                    <span>Information utilisateur sur menu latéral</span>
                     <mat-slide-toggle [checked]="settings.sidenavUserBlock" (change)="settings.sidenavUserBlock = !settings.sidenavUserBlock" labelPosition="before"></mat-slide-toggle>
                 </div>
             </div>
