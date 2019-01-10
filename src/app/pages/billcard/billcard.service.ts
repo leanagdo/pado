@@ -73,8 +73,6 @@ export class BillCardService {
 
       //myArr.sort((val1, val2)=> {return new Date() (val2.CREATE_TS) - new 
       //  Date(val1.CREATE_TS)})
-      debugger;
-
       console.log(returnArray);
       return returnArray;
  
@@ -84,7 +82,6 @@ export class BillCardService {
 
   /*
   load( id ) {
-    debugger;
     if (this.data) {
       // already loaded data
       return Promise.resolve(this.data);
@@ -116,7 +113,6 @@ export class BillCardService {
             });
           }
           resolve(returnArray);
-          debugger;
         });
     });
   }*/
