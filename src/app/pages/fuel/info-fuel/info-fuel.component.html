@@ -5,17 +5,27 @@
                 <mat-card-subtitle class="m-0">Evolution prix carburant</mat-card-subtitle>
                 <mat-chip-list>
                     <mat-chip color="accent" selected="true" class="info-chip">
-                        <mat-icon class="icon-sm">trending_up</mat-icon>37%
+                        <mat-icon class="icon-sm">trending_up</mat-icon>{{lastLiter}} €/l
                     </mat-chip>
                 </mat-chip-list>
-            </mat-card-header>         
+            </mat-card-header>   
             <div class="w-100 h-100p">
                 <ngx-charts-bar-vertical
                     [scheme]="colorScheme"
-                    [results]="products"                      
+                    [results]="fuelEvolution"   
+                    [xAxis]="false"
+                    [yAxis]="false"             
+                    [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel"
+                    [barPadding]="1"
                     (select)="onSelect($event)">
+                    <ng-template #tooltipTemplate let-model="model">
+                        <pre>{{model.name | date :'dd/MM/yyyy'}}<br>{{model.value}} €/l</pre>
+                    </ng-template>
+
                 </ngx-charts-bar-vertical>                   
-            </div>
+            </div>     
+            
         </mat-card>
     </div>
     <div fxFlex="100" fxFlex.gt-sm="50" fxFlex.sm="100" class="flex-p"> 
@@ -24,16 +34,28 @@
                 <mat-card-subtitle class="m-0">Evolution kilomètre</mat-card-subtitle>
                 <mat-chip-list>
                     <mat-chip color="primary" selected="true" class="info-chip">
-                        <mat-icon class="icon-sm">trending_up</mat-icon>15%
+                        <mat-icon class="icon-sm">trending_up</mat-icon>{{lastKm}}
                     </mat-chip>
                 </mat-chip-list>
             </mat-card-header>         
             <div class="w-100 h-100p">
                 <ngx-charts-line-chart
+                
                     [scheme]="colorScheme"
-                    [results]="orders"                      
+                    [results]="kmEvolution"                      
                     [autoScale]="autoScale"
-                    (select)="onSelect($event)">
+                    [xAxis]="true"
+                    [yAxis]="true"
+                    (select)="onSelect($event)"
+                    [xAxisTickFormatting]="dateTickFormatting">
+                    <ng-template #tooltipTemplate let-model="model">
+                        <pre>{{model.name | date :'dd/MM/yyyy'}}<br>{{model.value}} km</pre>
+                    </ng-template>
+                      <!-- <ng-template #seriesTooltipTemplate let-model="model">
+                        This is vertical line tooltip template
+                        <pre>{{model.value}}</pre>        
+                      </ng-template> -->
+                    
                 </ngx-charts-line-chart>                  
             </div>
         </mat-card>

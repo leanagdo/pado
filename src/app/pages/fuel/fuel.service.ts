@@ -21,7 +21,7 @@ export class FuelService {
   loadBill () {
 
   }
-  
+    
   public loadDpak$(): Observable<Fuel[]> {
     return this.http
     .get(
@@ -50,71 +50,11 @@ export class FuelService {
         });
 
       }   
-      //let madate:Date = new Date(returnArray[0]["date"]);
 
-     
-      returnArray = returnArray.sort(
-        (val1 : Fuel, val2 : Fuel) => {
-          if (val2.date > val1.date) {
-            return 1;
-          }
-          else if (val2.date < val1.date) {
-            return -1;
-          }
-          else {
-            return 0
-          }
-
-          //return <any>val2.date - <any>val1.date
-        });
-
-      //myArr.sort((val1, val2)=> {return new Date() (val2.CREATE_TS) - new 
-      //  Date(val1.CREATE_TS)})
-      debugger;
-
-      console.log(returnArray);
-      return returnArray;
- 
+      return returnArray.filter(x => x.voiture === 'CLA');
     }
     ));
   }
 
-  /*
-  load( id ) {
-    debugger;
-    if (this.data) {
-      // already loaded data
-      return Promise.resolve(this.data);
-    }
-
-    var url = 'https://spreadsheets.google.com/feeds/list/' + id + '/od6/public/values?alt=json'; 
-    // don't have the data yet
-    return new Promise(resolve => {
-      // We're using Angular Http provider to request the data,
-      // then on the response it'll map the JSON data to a parsed JS object.
-      // Next we process the data and resolve the promise with the new data.
-      this.http.get(url)
-        .map(res => res.json() )
-        .subscribe( data => {
-          console.log( 'Raw Data', data );
-          this.data = data.feed.entry;
-          
-          let returnArray: Array<any> = [];
-          if( this.data && this.data.length > 0 ) {
-            this.data.forEach( ( entry, index ) => {
-              var obj = {};
-              for( let x in entry ) {
-                if( x.includes('gsx$') && entry[x].$t ){
-                  obj[x.split('$')[1]] = entry[x]['$t'];
-                  // console.log( x.split('$')[1] + ': ' + entry[x]['$t'] );
-                }
-              }
-              returnArray.push( obj );
-            });
-          }
-          resolve(returnArray);
-          debugger;
-        });
-    });
-  }*/
+  
 }

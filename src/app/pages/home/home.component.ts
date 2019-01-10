@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
 
   constructor() { 
     this.fetch((data) => {
-      debugger;
       this.rows = data;
       this.domains = data.domains;
       

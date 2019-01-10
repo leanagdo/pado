@@ -51,7 +51,6 @@ export class PhotosDialogComponent implements OnInit {
 
   ngOnInit() {
     if(this.user){
-      debugger;
       this.form.setValue(this.user);
     } 
     else{

@@ -22,7 +22,6 @@ export class PhotosComponent implements OnInit {
                 public dialog: MatDialog,
                 public photosService:PhotosService){
         this.fetch((data) => {
-            debugger;
             this.photos = data.photos;
             console.log(this.photos);
             setTimeout(() => { }, 1500);
@@ -66,7 +65,6 @@ export class PhotosComponent implements OnInit {
 
 
     public openPhotosDialog(user){
-        debugger;
         let dialogRef = this.dialog.open(PhotosDialogComponent, {
             data: user, height: '90%', width: '95%'
         });

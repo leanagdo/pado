@@ -9,6 +9,7 @@ import { FuelComponent } from './fuel.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { InfoFuelComponent } from './info-fuel/info-fuel.component';
 import { ChartFuelComponent } from './chart-fuel/chart-fuel.component';
+import { PipesModule } from '../../theme/pipes/pipes.module';
 
 export const routes = [
   { path: '', component: FuelComponent, pathMatch: 'full' }
@@ -23,6 +24,7 @@ export const routes = [
     PerfectScrollbarModule,
     SharedModule,
     NgxDatatableModule,
+    PipesModule,
 
   ],
   declarations: [

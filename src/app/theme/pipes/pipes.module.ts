@@ -8,6 +8,7 @@ import { UserSearchPipe } from './search/user-search.pipe';
 import { PhotosSearchPipe } from './search/photos-search.pipe';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { MailSearchPipe } from './search/mail-search.pipe';
+import { FrenchDecimalPipe } from './numbers/french-decimal-pipe';
 
 @NgModule({
     imports: [ 
@@ -20,7 +21,8 @@ import { MailSearchPipe } from './search/mail-search.pipe';
         UserSearchPipe,
         PhotosSearchPipe,
         TruncatePipe,
-        MailSearchPipe
+        MailSearchPipe,
+        FrenchDecimalPipe
     ],
     exports: [
         PaginationPipe,
@@ -29,7 +31,8 @@ import { MailSearchPipe } from './search/mail-search.pipe';
         UserSearchPipe,
         PhotosSearchPipe,
         TruncatePipe,
-        MailSearchPipe
+        MailSearchPipe,
+        FrenchDecimalPipe
     ]
 })
 export class PipesModule { }
