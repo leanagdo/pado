@@ -88,7 +88,7 @@
 
             <ngx-datatable-column name="Montant">
                 <ng-template ngx-datatable-cell-template let-value="value">
-                  {{value}}
+                  {{value | number : '1.2-2'}}
                 </ng-template>
             </ngx-datatable-column>
 
@@ -99,7 +99,7 @@
             </ngx-datatable-column>
             <ngx-datatable-column name="Litre">
                 <ng-template ngx-datatable-cell-template let-value="value">
-                  {{value}}
+                  {{value | number : '1.2-2'}}
                 </ng-template>
             </ngx-datatable-column>
           <!--
