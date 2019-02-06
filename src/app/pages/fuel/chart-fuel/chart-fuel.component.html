@@ -36,18 +36,19 @@
                 [yScaleMax]="yScaleMax"
                 [showDataLabel]="showDataLabel"
                 (select)="select($event)"
+                [view]="view"
+                [legendTitle]="legendTitle"
+
                 -->
             
 
             <ngx-charts-bar-vertical-2d
                 class="chart-container"
-                [view]="view"
                 [scheme]="colorScheme"
                 [results]="expanseDatas"
                 [xAxis]="true"
                 [yAxis]="true"
                 [legend]="true"
-                [legendTitle]="legendTitle"
                 
                 [barPadding]="1"
                 [groupPadding]="3">
