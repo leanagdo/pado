@@ -10,13 +10,14 @@
                 </mat-chip-list>
             </mat-card-header>   
             <div class="w-100 h-100p">
+                    <!-- [xAxisLabel]="xAxisLabel"
+                    [yAxisLabel]="yAxisLabel" -->
+
                 <ngx-charts-bar-vertical
                     [scheme]="colorScheme"
                     [results]="fuelEvolution"   
                     [xAxis]="false"
                     [yAxis]="false"             
-                    [xAxisLabel]="xAxisLabel"
-                    [yAxisLabel]="yAxisLabel"
                     [barPadding]="1"
                     (select)="onSelect($event)">
                     <ng-template #tooltipTemplate let-model="model">
