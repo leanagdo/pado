@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import { MatDialog } from '@angular/material';
+import { PDFDialogComponent } from './pdf-dialog/pdf-dialog.component';
+
 
 @Component({
   selector: 'app-home',
@@ -10,7 +14,7 @@ export class HomeComponent implements OnInit {
   domains = [];
   loadingIndicator: boolean = true;
 
-  constructor() { 
+  constructor(public dialog: MatDialog) { 
     this.fetch((data) => {
       this.rows = data;
       this.domains = data.domains;
@@ -33,7 +37,6 @@ export class HomeComponent implements OnInit {
   }
 
   getAge() {
-    debugger;
     var currentDate=new Date();
     var currentYear=currentDate.getFullYear();
     var currentMonth=currentDate.getMonth()+1;
@@ -83,4 +86,17 @@ export class HomeComponent implements OnInit {
     return newstr;
 
   }
+
+  public openPDFDialog(){
+    let dialogRef = this.dialog.open(PDFDialogComponent, {
+        height: '90%', width: '95%'
+    });
+
+    dialogRef.afterClosed().subscribe(user => {
+        // if(user){
+        //     (user.id) ? this.updateUser(user) : this.addUser(user);
+        // }
+    });
+}
+
 }

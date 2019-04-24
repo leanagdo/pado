@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { SharedModule } from '../../shared/shared.module';
 import { CommonModule } from '@angular/common';
+import { PDFDialogComponent } from './pdf-dialog/pdf-dialog.component';
 
 export const routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' }
@@ -16,7 +17,12 @@ export const routes = [
 
   ],
   declarations: [
-    HomeComponent
+    HomeComponent,
+    PDFDialogComponent
   ],
+  entryComponents:[
+    PDFDialogComponent
+  ]
+
 })
 export class HomeModule { }
