@@ -22,20 +22,17 @@ export class LoginComponent {
   }
 
   public onSubmit(values:Object):void {
-    debugger;
     //var email = this.form.value["email"];
     var login = this.form.value["login"];
     var password = this.form.value["password"];
     if (this.form.valid && login === "dpak" && password === "dominique") {
       this.router.navigate(['/']);
       this.settings.logged = true;
-      debugger;
       this.settings.loggedLogin = login;
     }
     if (this.form.valid && login === "guest" && password === "guest") {
       this.router.navigate(['/']);
       this.settings.logged = true;
-      debugger;
       this.settings.loggedLogin = login;
     }
   }
