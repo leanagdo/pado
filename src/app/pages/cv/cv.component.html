@@ -186,12 +186,17 @@
             <mat-card-header class="bg-primary p-1" fxLayoutAlign="flex-start center">
                 <mat-icon>card_travel</mat-icon>
                 <mat-card-title class="m-0">
-                    <h3>Expérience professionnelle
-                    </h3>
+                    <h3>Expérience professionnelle</h3>
                 </mat-card-title>
+
                 <div fxFlex>
-                    <button style="color:white" *ngIf="!showExperiences" mat-button color="primary" (click)="openExperiencesAll()">Tout ouvrir</button>
-                    <button style="color:white" *ngIf="showExperiences" mat-button color="primary" (click)="closeExperiencesAll()">Tout fermer</button>
+                  <button style="color:white" *ngIf="!showExperiences" mat-button color="primary" (click)="openExperiencesAll()">Tout ouvrir</button>
+                  <button style="color:white" *ngIf="showExperiences" mat-button color="primary" (click)="closeExperiencesAll()">Tout fermer</button>
+                  <a href="/assets/img/home/cv-paskiewicz.pdf" target="_blank">
+                    <img src="/assets/img/cv/adobe-pdf.png" class="adobe-pdf" (click)="openPDFDialog()"/>
+                  </a>
+                </div>
+                <div fxFlex>
                 </div>
 
                 <div fxFlex></div>
