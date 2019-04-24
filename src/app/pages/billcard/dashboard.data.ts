@@ -1,3 +1,14 @@
+export const seriesTemplate = [
+  {
+   name: 'dépenses',
+   series: [
+     {
+       
+     }
+   ]
+ }
+]
+
 export const orders = [
    {
     name: 'Orders',
@@ -286,5 +297,6 @@ export const analytics = [
         value: 38855
       }
     ]
+
   }
 ]

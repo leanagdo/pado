@@ -1,65 +1,79 @@
+<!-- https://swimlane.gitbook.io/ngx-charts/ -->
 <div fxLayout="row wrap">
     <div fxFlex="100" fxFlex.gt-sm="40" class="flex-p"> 
-        <app-spent-by-category></app-spent-by-category>
+        <app-spent-by-category
+        [expanseByMonth]="expanseByMonth"
+        [rows]="rows"
+        [categories]="categories">
+      </app-spent-by-category>
     </div>
-    <div fxFlex="100" fxFlex.gt-sm="60" class="flex-p">
-        <app-chart-spent
+     <div fxFlex="100" fxFlex.gt-sm="60" class="flex-p">
+     <app-chart-spent
+          [expanseByMonth]="expanseByMonth"
+          (selectMonthEvent)="onSelectMonthEvent($event)"
           [rows]="rows">
         </app-chart-spent>
-    </div>
+    </div> 
 </div>
 <div fxLayout="column">
     <div fxFlex="100" class="flex-p"> 
-        <div fxLayout="column" class="mat-elevation-z8">           
-            <mat-form-field class="p-1">
-                <input matInput placeholder="Type to filter the name column..." (keyup)="updateFilter($event)">
-            </mat-form-field>
+        <div fxLayout="row wrap">
+            <div fxFlex="100" fxFlex.gt-sm="8" class="flex-p" *ngIf="selectedCategory != null"> 
+        
+                <mat-form-field>
+                  <mat-select placeholder="Mois" (selectionChange)="onMonthChanged($event)" (change)="onMonthChanged($event)" [(value)]="selectedCategory">
+                    <mat-option *ngFor="let cat of categories" [value]="cat.categoryDate" >
+                      {{cat.categoryName}}
+                    </mat-option>
+                  </mat-select>
+          
+              </mat-form-field>
+            </div>
+            <div fxFlex="100" fxFlex.gt-sm="5" class="flex-p" *ngIf="selectedCategory != null"> 
+                <button mat-icon-button (click)="eraseFilter()"><mat-icon>delete</mat-icon></button>
+            </div>
+            <div fxFlex="100" fxFlex.gt-sm="5" class="flex-p" *ngIf="selectedCategory != null"> 
+                Montant total : {{monthTotalAmount | numberfr : '1.2-2':'fr'}} €
+            </div>
+
+            <div fxFlex="100" fxFlex.gt-sm="100" class="flex-p" *ngIf="selectedCategory == null">
+                <div fxLayout="column" class="mat-elevation-z8">           
+                    <mat-form-field class="p-1">
+                        <input matInput placeholder="Type to filter the name column..." (keyup)="updateFilter($event)">
+                    </mat-form-field>
+                </div>
+        
+            </div>
         </div>
+
+        <!-- striped expandable-->
         <ngx-datatable
             #table
-            class="material"
+            class="material striped"
             [headerHeight]="50"
-            [limit]="10"
+            [limit]="limitTable"
             [columnMode]="'force'"
             [footerHeight]="50"
             [rowHeight]="'auto'"
             [rows]="rows"
-            [rows]
+            [columnMode]="'force'"
             [loadingIndicator]="loadingIndicator"
             [selected]="selected"
             [selectionType]="'checkbox'"
             (activate)="onActivate($event)"
-            (select)='onSelect($event)'>
-            <!--<ngx-datatable-column
-                [width]="30"
-                [sortable]="false"
-                [canAutoResize]="false"
-                [draggable]="true"
-                [resizeable]="false"
-                [headerCheckboxable]="true"
-                [checkboxable]="true">
-            </ngx-datatable-column>
+            (select)='onSelect($event)'
+            [rowClass]="getRowClass"
+            >
+
             <ngx-datatable-column name="carte">
-              <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="row">
-                <span
-                  title="Double click to edit"
-                  (dblclick)="editing[rowIndex + '-name'] = true"
-                  *ngIf="!editing[rowIndex + '-name']">
-                  {{value}}
-                </span>
-                <input
-                  autofocus
-                  (blur)="updateValue($event, 'name', rowIndex)"
-                  *ngIf="editing[rowIndex+ '-name']"
-                  type="text"
-                  [value]="value"
-                />
-              </ng-template>
-            </ngx-datatable-column>-->
-          
+                <ng-template ngx-datatable-cell-template let-value="value">
+                    {{value}}
+                </ng-template>
+            </ngx-datatable-column>
+
             <ngx-datatable-column name="date">
                 <ng-template ngx-datatable-cell-template let-value="value">
-                  {{value}}
+                  {{value | date: 'dd/MM/yyyy'}}
                 </ng-template>
             </ngx-datatable-column>
 
@@ -71,7 +85,7 @@
 
             <ngx-datatable-column name="montant">
                 <ng-template ngx-datatable-cell-template let-value="value">
-                  {{value}}
+                  {{value | number : '1.2-2'}}
                 </ng-template>
             </ngx-datatable-column>
 
@@ -100,11 +114,16 @@
                 </ng-template>
             </ngx-datatable-column>
 
-
+            <ngx-datatable-row-detail [rowHeight]="10" #myDetailRow>
+                <ng-template let-row="row" ngx-datatable-row-detail-template>
+                  <div><strong>Address</strong></div>
+                  <div>{{row.address.city}}, {{row.address.state}}</div>
+                </ng-template>
+              </ngx-datatable-row-detail>
              
 
         </ngx-datatable>
     </div>
 </div>
 
-<ng-template #empty> No Customers Yet </ng-template>
+<ng-template #empty> Pas de donnée disponible </ng-template>

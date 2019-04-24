@@ -9,6 +9,7 @@ import { BillCardComponent } from './billcard.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { SpentByCategoryComponent } from './spent-by-category/spent-by-category.component';
 import { ChartSpentComponent } from './chart-spent/chart-spent.component';
+import { PipesModule } from '../../theme/pipes/pipes.module';
 
 export const routes = [
   { path: '', component: BillCardComponent, pathMatch: 'full' }
@@ -23,6 +24,8 @@ export const routes = [
     PerfectScrollbarModule,
     SharedModule,
     NgxDatatableModule,
+    PipesModule,
+
 
   ],
   declarations: [

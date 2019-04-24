@@ -6,19 +6,27 @@
             <div class="w-100 h-300p" #resizedDiv>
                 <ngx-charts-line-chart
                     [scheme]="colorScheme"
-                    [results]="analytics"
-                    [gradient]="gradient"
-                    [xAxis]="showXAxis"
-                    [yAxis]="showYAxis"
+                    [results]="datasByMonth"
+                    [xAxis]="true"
+                    [yAxis]="true"
                     [legend]="showLegend"
-                    [showXAxisLabel]="showXAxisLabel"
-                    [showYAxisLabel]="showYAxisLabel"
-                    [xAxisLabel]="xAxisLabel"
-                    [yAxisLabel]="yAxisLabel"
+                    [showXAxisLabel]="false"
+                    [showYAxisLabel]="false"
                     [autoScale]="autoScale"
-                    [roundDomains]="roundDomains"
-                    (select)="onSelect($event)">
-                </ngx-charts-line-chart>             
+                    (select)="onSelect($event)"
+                    [xAxisTickFormatting]="dateTickFormatting"
+                    [yAxisTickFormatting]="yTickFormatting"
+                    [timeline]="true"
+                    [yScaleMin]="0"
+                    [yScaleMax]="3000"
+                    [legendTitle]="Cartes"
+                    [showRefLines]="true"
+                    (click)="onSelect($event)">
+                    <ng-template #tooltipTemplate let-model="model">
+                        <pre>{{model.name | date :'MMM/yyyy'}}<br>{{model.value | numberfr}} €</pre>
+                    </ng-template>
+                </ngx-charts-line-chart>                       
             </div>
         </mat-card-content>
-    </mat-card>
+</mat-card>
+
