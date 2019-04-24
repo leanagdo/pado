@@ -53,7 +53,7 @@
                 [barPadding]="1"
                 [groupPadding]="3">
                 <ng-template #tooltipTemplate let-model="model">
-                        <pre>{{model.name != 'km' ? model.name : ''}}<br>{{model.value}} {{model.name === 'depenses' ? '€' : (model.name === 'km' ? 'km' : 'l') }}</pre>
+                        <pre>{{model.name != 'km' ? model.name : ''}}<br>{{model.value | number : '1.2-2'}} {{model.name === 'depenses' ? '€' : (model.name === 'km' ? 'km' : 'l') }}</pre>
                 </ng-template>
 
             </ngx-charts-bar-vertical-2d>
