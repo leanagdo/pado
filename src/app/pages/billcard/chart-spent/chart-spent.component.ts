@@ -149,9 +149,6 @@ export class ChartSpentComponent implements OnInit, AfterViewInit {
     });
     graph.push(datasCoop);
 
-    
-      debugger;
-
     return graph;
   }
 

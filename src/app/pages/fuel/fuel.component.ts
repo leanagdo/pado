@@ -67,7 +67,7 @@ export class FuelComponent implements OnInit {
 
 
       var lastFuel:Fuel = items[0];
-debugger;
+
       this.lastUpdateDate = new Date(lastFuel.date) ;
       this.lastUpdateKm = lastFuel.kilometrage;
       var price:number = Number(lastFuel.montant.replace(",",".")) / Number(lastFuel.litre.replace(",","."));
@@ -129,7 +129,7 @@ debugger;
         let m:string = fuel.date.substr(5,2);
         let d:string = fuel.date.substr(8,2);
   
-        fe.date = new Date(Number(fuel.date.substr(0,4)), Number(fuel.date.substr(5,2)), Number(fuel.date.substr(8,2)));
+        fe.date = new Date(Number(fuel.date.substr(0,4)), Number(fuel.date.substr(5,2))-1, Number(fuel.date.substr(8,2)));
         let montant:string = fuel.montant.replace(',','.');
         let litre:string = fuel.litre.replace(',','.');
   
@@ -223,7 +223,6 @@ around2digit(numberToconvert:number):number {
     let graph:Array<Expanse> = new Array<Expanse>();
 
     byYear.forEach(element => {
-      debugger;
         let expanse:Expanse = new Expanse();
         expanse.name = element.year;
         let amount = this.getTotalAmount(element.values);
@@ -250,7 +249,6 @@ around2digit(numberToconvert:number):number {
     let graph:Array<Expanse> = new Array<Expanse>();
 
     byYear.forEach(element => {
-      debugger;
         let expanse:Expanse = new Expanse();
         expanse.name = element.year;
         let maxkm:number = this.getMaxKm(element.values);
@@ -268,7 +266,6 @@ around2digit(numberToconvert:number):number {
   }
 
   getMaxKm(items:Array<Fuel>): number {
-    debugger;
     var max = 0;
     if (items != null && items.length > 0) {      
       items.forEach(x => {
@@ -281,7 +278,6 @@ around2digit(numberToconvert:number):number {
     return max;
   }  
   getMinKm(items:Array<Fuel>): number {
-    debugger;
     var min = 999999;
     if (items != null && items.length > 0) {      
       items.forEach(x => {

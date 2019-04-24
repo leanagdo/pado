@@ -107,7 +107,6 @@ export class SpentByCategoryComponent implements OnInit, AfterViewInit, AfterCon
   }
 
   onMonthChanged(item:MatSelectChange) {
-    debugger;
     this.selectedMonth = [];
     this.initDatas(item.value);
   }

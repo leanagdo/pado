@@ -59,7 +59,6 @@ export class BillCardComponent implements OnInit, AfterViewInit {
     this.service.loadDpak$().subscribe((items: BillCard[]) => {
       this.temp = items;
       this.rows = items;
-      debugger;
       setTimeout(() => { this.loadingIndicator = false; }, 500);
 
       var itemDesc = this.sortByDateDesc(this.rows);
@@ -249,7 +248,6 @@ export class BillCardComponent implements OnInit, AfterViewInit {
   // }
   
 //   getRowClass = (row) => {
-//     debugger;
 //     return {
 //       'row-color': true
 //     };
